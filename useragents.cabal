@@ -4,10 +4,13 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: f4f649e9f291d23ae35e58da564c7f9980bd0ff478bf0947c63f678637494e85
+-- hash: d9c031df9bb4c4a83afaa005a54a63f23217fe47224302c3c429cbbea405f7df
 
 name:           useragents
 version:        1.0.0
+synopsis:       A collection of user agents
+description:    A collection of user agents, easily select a random one.
+category:       Network
 homepage:       https://github.com/jappeace/useragents#readme
 bug-reports:    https://github.com/jappeace/useragents/issues
 author:         Jappie Klooster
@@ -30,7 +33,7 @@ library
       Paths_useragents
   hs-source-dirs:
       src
-  ghc-options: -Werror -Wall -Wcompat -Wincomplete-uni-patterns -Widentities -threaded -rtsopts -with-rtsopts=-N
+  ghc-options: -Wall -Wcompat -Wincomplete-uni-patterns -Wredundant-constraints -Wincomplete-record-updates -Widentities
   build-depends:
       base >=4.7 && <5
     , random-fu
@@ -43,7 +46,7 @@ executable random-user-agent
       Paths_useragents
   hs-source-dirs:
       app
-  ghc-options: -Werror -Wall -Wcompat -Wincomplete-uni-patterns -Widentities -threaded -rtsopts -with-rtsopts=-N
+  ghc-options: -Wall -Wcompat -Wincomplete-uni-patterns -Wredundant-constraints -Wincomplete-record-updates -Widentities -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
     , random-fu

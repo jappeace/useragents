@@ -6,17 +6,20 @@ author:              "Jappie Klooster"
 maintainer:          "jappieklooster@hotmail.com"
 copyright:           "2019 Jappie Klooster"
 synopsis: "A collection of user agents"
-description: "A collection of user agents"
+description: "A collection of user agents, easily select a random one."
+category: Network
 
 extra-source-files:
 - Readme.md
 
 ghc-options:
-    - -Werror
     - -Wall
     - -Wcompat
     - -Wincomplete-uni-patterns
+    - -Wredundant-constraints
+    - -Wincomplete-record-updates
     - -Widentities
+
 
 dependencies:
 - base >= 4.7 && < 5

@@ -10,5 +10,6 @@ mkDerivation {
   executableHaskellDepends = [ base random-fu text ];
   preConfigure = "hpack";
   homepage = "https://github.com/jappeace/useragents#readme";
+  description = "A collection of user agents";
   license = stdenv.lib.licenses.mit;
 }

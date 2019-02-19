@@ -1,4 +1,4 @@
-OPTIMIZATION=-O0
+OPTIMIZATION="-O0"
 build: update-cabal
 	cabal new-build all -j --ghc-options $(OPTIMIZATION)
 
