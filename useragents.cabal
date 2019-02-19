@@ -4,44 +4,49 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 69ef6a9f35c2155f0d767c71d9e23d788718b29f7c428a05066e2f8f6aca29fe
+-- hash: f4f649e9f291d23ae35e58da564c7f9980bd0ff478bf0947c63f678637494e85
 
-name:           template
+name:           useragents
 version:        1.0.0
-homepage:       https://github.com/jappeace/template#readme
-bug-reports:    https://github.com/jappeace/template/issues
+homepage:       https://github.com/jappeace/useragents#readme
+bug-reports:    https://github.com/jappeace/useragents/issues
 author:         Jappie Klooster
 maintainer:     jappieklooster@hotmail.com
 copyright:      2019 Jappie Klooster
 license:        MIT
+license-file:   LICENSE
 build-type:     Simple
 extra-source-files:
     Readme.md
 
 source-repository head
   type: git
-  location: https://github.com/jappeace/template
+  location: https://github.com/jappeace/useragents
 
 library
   exposed-modules:
-      Lib
+      Network.HTTP.UserAgent
   other-modules:
-      Paths_template
+      Paths_useragents
   hs-source-dirs:
       src
   ghc-options: -Werror -Wall -Wcompat -Wincomplete-uni-patterns -Widentities -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
+    , random-fu
+    , text
   default-language: Haskell2010
 
-executable exe
+executable random-user-agent
   main-is: exe.hs
   other-modules:
-      Paths_template
+      Paths_useragents
   hs-source-dirs:
       app
   ghc-options: -Werror -Wall -Wcompat -Wincomplete-uni-patterns -Widentities -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
-    , template
+    , random-fu
+    , text
+    , useragents
   default-language: Haskell2010

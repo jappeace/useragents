@@ -1,6 +1,6 @@
 module Main where
 
-import           Lib
+import           Network.HTTP.UserAgent
 
 main :: IO ()
-main = libF
+main = print =<< randomAgent

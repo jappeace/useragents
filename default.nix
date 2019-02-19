@@ -1,14 +1,14 @@
-{ mkDerivation, base, hpack, stdenv }:
+{ mkDerivation, base, hpack, random-fu, stdenv, text }:
 mkDerivation {
-  pname = "template";
+  pname = "useragents";
   version = "1.0.0";
   src = ./.;
   isLibrary = true;
   isExecutable = true;
-  libraryHaskellDepends = [ base ];
+  libraryHaskellDepends = [ base random-fu text ];
   libraryToolDepends = [ hpack ];
-  executableHaskellDepends = [ base ];
+  executableHaskellDepends = [ base random-fu text ];
   preConfigure = "hpack";
-  homepage = "https://github.com/jappeace/template#readme";
+  homepage = "https://github.com/jappeace/useragents#readme";
   license = stdenv.lib.licenses.mit;
 }

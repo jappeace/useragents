@@ -1,6 +1,6 @@
-name:                template
+name:                useragents
 version:             1.0.0
-github:              "jappeace/template"
+github:              "jappeace/useragents"
 license:             MIT
 author:              "Jappie Klooster"
 maintainer:          "jappieklooster@hotmail.com"
@@ -21,13 +21,14 @@ ghc-options:
 
 dependencies:
 - base >= 4.7 && < 5
+- text
+- random-fu
 
 library:
   source-dirs: src
-
 executables:
-  exe:
+  random-user-agent:
     main:                exe.hs
     source-dirs:         app
     dependencies:
-    - template
+    - useragents

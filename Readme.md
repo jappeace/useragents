@@ -1,10 +1,3 @@
-# Haskell project template
+# User agents for haskell
 
-Project template for nixos, can't use stack cause nixos
-reasons.
-
-Comes with:
-+ a poor mans' file watch.
-+ a nix shell.
-+ A couple of make commands.
-+ filled in directories.
+Usefull if you need a random realistic user agent.
